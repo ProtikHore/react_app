@@ -7,6 +7,7 @@ import Hello from './components/Hello'
 import ListProps from './components/ListProps'
 import StateLessComponent from './components/StateLessComponent'
 import ConditionalComponent from './components/ConditionalComponent'
+import AddForm from './components/AddForm'
 
 
 class App extends Component {
@@ -18,14 +19,24 @@ class App extends Component {
       {name: 'MR. B', age: 35},
     ]
   }
+
+  FormData = (data) => {
+    console.log(data);
+    let listData = [...this.state.listData, data];
+    this.setState({
+      listData: listData
+    })
+  }
+
   render() {
     return (
       <div className="App">
-        <Welcome />
+        {/* <Welcome /> */}
         {/* <Hello name="Hore" age="20" /> */}
         {/* <ListProps listData={this.state.listData} /> */}
         {/* <StateLessComponent listData={this.state.listData} /> */}
         <ConditionalComponent listData={this.state.listData} />
+        <AddForm formValue={this.FormData} />
       </div>
     );
   }

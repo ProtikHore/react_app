@@ -25,7 +25,7 @@ const ConditionalComponent = (props) => {
                         <div className="list_prop_contant">
                                 <div>
                                      <p>Hello { list.name } </p>
-                                     <p>Years Old { list.age }</p>
+                                     <p>{ list.age } Years Old</p>
                                  </div>
                              </div>
                     ) : null

@@ -31,8 +31,6 @@ class Welcome extends Component {
     }
 
     render() {
-        console.log(this.props);
-        const { name, age } = this.props;
         return (
             <div className="app_content">
                 {/* print from state */}
@@ -45,12 +43,6 @@ class Welcome extends Component {
                     <input type="text" onChange={this.formChange} />
                     <button>Submit</button>
                 </form>
-
-                {/* print from props */}
-                <div>
-                    <p>Hello { name }</p>
-                    <p>{ age } Years Old</p>
-                </div>
             </div>
         )
     }

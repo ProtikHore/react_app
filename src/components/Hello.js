@@ -1,17 +1,19 @@
-import React from 'react'
+import React, {Component} from 'react'
 
-const Hello = () => {
-    // return (
-    //     <div className = 'hello'>
-    //         <h2>This Is JSX</h2>
-    //     </div>
-    // )
-
-    return React.createElement(
-        'div',
-        { id: 'helli_id', className: 'hello_class'},
-        React.createElement('h2', null, 'This Is 2nd JSX')
-    )
+class Hello extends Component {
+    render() {
+        console.log(this.props);
+        const { name, age } = this.props;
+        return (
+            <div className="prop_contant">
+                {/* print from props */}
+                <div>
+                    <p>Hello { name }</p>
+                    <p>{ age } Years Old</p>
+                </div>
+            </div>
+        )
+    }
 }
 
 export default Hello

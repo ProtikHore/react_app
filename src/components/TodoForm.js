@@ -25,6 +25,14 @@ class TodoForm extends Component {
                     <input type="text" id="name" name="name" onChange={this.changeFunction} value={this.state.content} />
                     <button>Submit</button>
                 </form>
+                {/* <form onSubmit={this.submitFunction}>
+                    <div className="row">
+                        <div className="col">
+                            <label htmlFor="name">Add New List: </label>
+                            <input className="form-control" type="text" id="name" name="name" onChange={this.changeFunction} value={this.state.content} />
+                        </div>
+                    </div>
+                </form> */}
             </div>
         )
     }

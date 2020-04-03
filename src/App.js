@@ -71,7 +71,7 @@ import Contact from './components/Contact'
 //         <h1 className="center blue-text">Todo's</h1>
 //         <TodoForm addTodo={this.addTodo} />
 //         <Todos todos={this.state.todos} deleteTodo={this.deleteTodo} />
-//         {/* <GetData /> */}
+//         <GetData />
 //       </div>
 //     );
 //   }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {BrowserRouter, Route} from 'react-router-dom'
+import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import logo from './logo.svg';
 // import './App.css';
 import Greet from './components/Greet'
@@ -16,6 +16,7 @@ import Navbar from './components/Navbar'
 import Home from './components/Home'
 import About from './components/About'
 import Contact from './components/Contact'
+import Post from './components/Post'
 
 
 // class App extends Component {
@@ -84,9 +85,12 @@ class App extends Component {
       <BrowserRouter>
       <div className="app">
         <Navbar />
+        <Switch>
         <Route exact path='/' component={Home}></Route>
         <Route path='/about' component={About}></Route>
         <Route path='/contact' component={Contact}></Route>
+        <Route path='/post/:post_id' component={Post}></Route>
+        </Switch>
       </div>
       </BrowserRouter>
     )

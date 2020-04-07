@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 class Home extends Component {
     state = {
         posts: []
     }
     componentDidMount () {
-        axios.get('http://localhost:8000/api/get/data').then(response => {
+        axios.get('https://jsonplaceholder.typicode.com/posts').then(response => {
             console.log(response);
             this.setState({
                 posts: response.data.slice(0, 10)
@@ -20,8 +21,9 @@ class Home extends Component {
             return (
             <div className="post card" key={post.id}>
                 <div className="card-content">
-                <span className="card-title">{post.name}</span>
-                <span className="card-body">{post.mobile_no}</span>
+                <Link to={'/post/' + post.id}>
+                    <span className="card-title">{post.title}</span>
+                </Link>
                 <p>{post.body}</p>
                 </div>
             </div>
